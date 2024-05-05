@@ -1,0 +1,19 @@
+<template>
+    
+        <div >
+            <lightning-card title="Validate Form">
+                <div class="slds-p-around_x-large">
+                    <lightning-input type="text" label="Name" value={nameval} name="name" onchange={handlechange}></lightning-input>
+                    <div class="error-Name" >{Namevalidate}.</div>
+                    <lightning-input type="text" label="Email" value={emailval} name="email" onchange={handlechange}></lightning-input>
+                    <div class="error-message" >{Emailvalidate}.</div>
+                    <lightning-input type="text" label="Message" value={msgval} name="msg" onchange={handlechange}></lightning-input>
+                    <div class="error-Name" >{msgvalidate}.</div>
+                    <br> 
+                    <lightning-button label="Submit" variant="Brand" onclick={handleEmailValidation}></lightning-button>
+                </div>
+                <p slot="footer">* Designed by Praveen *</p>
+            </lightning-card>
+        </div>
+    
+</template>

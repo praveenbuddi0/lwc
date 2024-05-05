@@ -1,0 +1,19 @@
+<template>
+    
+        <div class="container">
+           <h2>Registration Form</h2>
+           <div class="form-field">
+              <label for="username">Username:</label>
+              <input type="text" id="username" oninput={handleUsernameChange} />
+           </div>
+           <div class="form-field">
+              <label for="password">Password:</label>
+              <input type="password" id="password" oninput={handlePasswordChange} />
+              <div class="error">{passwordError}</div>
+           </div>
+           <button class={registerButtonClass} onclick={registerUser} disabled={isRegisterButtonDisabled}>
+              Register
+           </button>
+        </div>
+     
+</template>

@@ -1,0 +1,27 @@
+.container {
+    padding: 20px;
+    color: brown;
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+.container::before {
+   
+    
+    cursor: pointer; /* changes cursor to pointer on hover */
+    text-decoration: none; /* removes default underline */
+    transition: text-decoration 0.3s ease; /* adds transition effect */
+    transform: scaleX(0);
+}
+
+.container:hover {
+    text-decoration: underline; /* adds underline on hover */
+    cursor: pointer;
+    color: rgb(99, 23, 230);
+    background-color: rgba(255, 228, 196, 0.557);
+    text-decoration-color: rgb(249, 53, 53);
+    
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(1);
+
+}

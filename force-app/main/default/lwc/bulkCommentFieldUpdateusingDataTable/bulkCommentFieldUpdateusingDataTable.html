@@ -1,0 +1,24 @@
+<template>
+   
+        
+         <div class="myTable">
+            <lightning-datatable
+              class="slds-table slds-table_bordered slds-table_col-bordered"
+              hide-checkbox-column
+              show-row-number-column
+              key-field="Id"
+              data={records}
+              columns={columns}
+              onsave={updateSelectedRecords}
+              
+            ></lightning-datatable>
+          </div>
+            
+           
+       
+
+                
+                    
+        
+      
+</template>

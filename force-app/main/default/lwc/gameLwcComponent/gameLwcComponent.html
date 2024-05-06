@@ -1,0 +1,21 @@
+<template>
+
+
+
+    <lightning-card title="Click on the numbers to score points!">
+        <p>Score: {score}</p>
+        <div class="game-container">
+            <!-- Game elements (1, 2, 3, 4) will be dynamically added here -->
+            <template for:each={gameElements} for:item="element">
+                <div key={element.id} class="game-element" data-id={element.id} onclick={handleClick}>
+                    {element.number}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+
+
+
+
+
+</template>

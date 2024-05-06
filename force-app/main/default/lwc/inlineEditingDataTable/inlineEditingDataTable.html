@@ -1,0 +1,30 @@
+<template>
+
+ 
+  <!-- added this card div to make the container look more native to the whole page and have a background -->
+  <div class="slds-card slds-p-around_medium">
+    <h2>
+      <lightning-icon icon-name="standard:orders" size="small"></lightning-icon>
+      <span class="slds-m-left_small">Kits</span>
+    </h2>
+    <!-- added spinner to indicate that something is loading on load or save -->
+   
+    <!-- error will be displayed in red text here if something is wrong -->
+    <div if:true={error} class="slds-text-color_error">{error}</div>
+    <!-- table -->
+    <div if:false={showTable}>Nothing to display</div>
+    <template if:true={showTable}>
+      <lightning-datatable
+        class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+        hide-checkbox-column="true"
+        key-field="Id"
+        data={records}
+        columns={columns}
+        onsave={updateSelectedRecords}
+      >
+      </lightning-datatable>
+    </template>
+  </div>
+
+
+</template>

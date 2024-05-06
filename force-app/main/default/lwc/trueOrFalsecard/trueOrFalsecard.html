@@ -1,0 +1,19 @@
+<template>
+
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+   <lightning-button variant="brand" label={varlab}  onclick={handleClick}></lightning-button>
+
+</lightning-card>
+
+   
+   <template if:false={showme}>
+      <lightning-card  variant="Narrow"  title="New card" icon-name="standard:account">
+             hello this is new lightning card
+     </lightning-card>
+   </template>
+    
+   
+
+    
+
+</template>

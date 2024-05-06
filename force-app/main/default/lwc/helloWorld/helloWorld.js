@@ -1,12 +1,10 @@
 import { LightningElement } from 'lwc';
+export default class Helloworld extends LightningElement {
+     world="helllo world";
 
-import BackgroundImg from '@salesforce/resourceUrl/background1';
-
-export default class HelloWorld extends LightningElement {
-
-
+    handlechange(event){
+        this.world = event.target.value;
+    }
 
 
-
-    imageUrl = BackgroundImg;
 }

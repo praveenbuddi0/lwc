@@ -1,0 +1,17 @@
+<template>
+ 
+ <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+        <div class="cssvar">
+     <p> {value}</p>
+     <lightning-input type="checkbox" label="Click me" onchange={handlechange}></lightning-input>
+
+     <template if:false={showme}>
+         am not visble
+     </template>
+     <template if:true={showme}>
+         visible now new template
+     </template>
+      </div>
+ </lightning-card>
+   
+</template>

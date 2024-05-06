@@ -1,0 +1,14 @@
+<template>
+  
+        <lightning-card>
+            <div style="height: 300px;" class="slds-p-around_small">
+                <template if:true={opplineitems}>
+                    <lightning-datatable key-field="Id" data={opplineitems} show-row-number-column
+                         columns={columns} onrowaction={handleRowAction}
+                        onsave={handleSave} draft-values={fldsItemValues}>
+                    </lightning-datatable>
+                </template>
+            </div>
+        </lightning-card>
+    
+</template>

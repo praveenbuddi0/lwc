@@ -1,13 +1,7 @@
 <template>
-    <lightning-card class="container">
-        <div class="background1">
-          <p> hello Pragarafarar</p>
-        </div>
-        <h1> Hello World</h1>
-    </lightning-card>
-
-    <div class="image2">
-        <img width="500px" src={imageUrl} />
-        </div>
-    
+   <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+     hello {world}
+   <lightning-input type="text"  value={world} onchange={handlechange}></lightning-input>
+   </lightning-card>
+   
 </template>

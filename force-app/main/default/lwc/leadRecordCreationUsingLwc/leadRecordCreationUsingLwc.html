@@ -1,0 +1,20 @@
+<template>
+        <lightning-card title="Cread Lead">
+            <template if:true={show}>
+            <div class="slds-p-around_small">
+                <lightning-input type="text" label="Name" value={nameval} name="name" onchange={handlechange}></lightning-input>
+                <lightning-input type="text" label="Phone" value={phoneval} name="phone" onchange={handlechange}></lightning-input>
+                <lightning-input type="text" label="Company" value={companyval} name="comp" onchange={handlechange}></lightning-input>
+                <lightning-combobox  name="status" label="Status" value={statusval} options={options} onchange={handlechange} ></lightning-combobox>
+                <br>
+                <lightning-button label="Submit" variant="Success"  onclick={handleclick}></lightning-button>
+            </div>
+            </template>
+            <template if:true={loading}>
+                <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+            </template>
+            <template if:true={success}>
+                <lightning-icon icon-name="action:approval" alternative-text="Approved" title="Approved" ></lightning-icon>
+            </template> 
+        </lightning-card>
+</template>
